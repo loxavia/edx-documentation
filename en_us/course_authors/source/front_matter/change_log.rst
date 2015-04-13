@@ -12,6 +12,9 @@ April 2015
 
    * - Date
      - Change
+   * - 14 Apr 2015
+     - Updated the :ref:`Working with Video Components` section to reflect a field
+       label change. 
    * - 10 Apr 2015
      - Add information for the :ref:`RecommenderXBlock`.
    * - 6 Apr 2015
