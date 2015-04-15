@@ -365,7 +365,7 @@ The following options appear on the **Advanced** tab in the video component.
 
         .. note:: Learners who download and play the video in the mobile 
          app see the entire video file. Only videos that play in a browser
-         start at the entered start time.
+         start playing at the specified start time.
 
     * - **Video Stop Time**
       - The time you want the video to stop if you do not want the entire video
@@ -373,7 +373,7 @@ The following options appear on the **Advanced** tab in the video component.
 
         .. note:: Learners who download and play the video in the mobile 
          app see the entire video file. Only videos that play in a browser
-         start at the entered stop time.
+         stop playing at the specified stop time.
 
     * - **YouTube IDs**
       - If you have uploaded separate video files to YouTube for different
