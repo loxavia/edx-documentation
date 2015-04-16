@@ -158,7 +158,7 @@ You can use keyboard shortcuts to create, edit, and delete your notes.
  caret browsing.
 
   * Internet Explorer and Firefox support caret browsing by default. To enable
-    caret browsing in Firefox, press the F7 key.
+    caret browsing in Firefox, press F7.
   * Safari supports caret browsing when VoiceOver is turned on. For more
     information about VoiceOver, see the `Apple website
     <https://www.apple.com/accessibility/osx/voiceover/>`_.
@@ -201,7 +201,7 @@ Edit or Delete a Note Using the Keyboard
 
 To edit or delete a note, follow these steps.
 
-#. Use the Tab key to move focus to the note that you want.
+#. Press Tab to move focus to the note that you want.
 #. Press Ctrl + spacebar or Ctrl + Enter to open the note editor.
 #. Press Tab to move the cursor to the text field, and then make the changes
    that you want.
