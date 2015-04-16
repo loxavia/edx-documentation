@@ -14,7 +14,6 @@ edX Guide for Students
    front_matter/index
    SFD_introduction
    SFD_getting_started
-   SFD_your_information
    SFD_video_player
    SFD_google_docs
    SFD_certificates

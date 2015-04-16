@@ -12,6 +12,9 @@ Change Log
 
    * - Date
      - Change
+   * - 21 Apr 2015
+     - Added :ref:`SFD Getting Started` topic with account settings and
+       profile information.
    * - 20 Mar 2015
      - Added registration and enrollment to the  :ref:`SFD Mobile` chapter.
    * - 4 Mar 2015
