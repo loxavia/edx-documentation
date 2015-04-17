@@ -184,7 +184,7 @@ You can share a limited profile or a full profile.
 
 .. note:: Learners under 13 years of age can only share a limited profile.
 
-A limited profile can include only your username and ab image.
+A limited profile can include only your username and an image.
 
 .. image:: /Images/SFD_Prof_Limited.png
  :width: 400
@@ -207,19 +207,20 @@ To create or edit a limited profile, follow these steps.
 
 #. On any edX page, select the arrow next to your username in the upper right
    corner, and then select **My Profile**.
-#. On your profile page, locate the **edX learners can see my** text in the
+#. On your profile page, locate **edX learners can see my** in the
    upper left corner of the page, and then select **Limited Profile**.
 
 #. (optional) Add an image that you want to associate with your edX username.
-   Your image must be a .gif, .jpg, .png, or .tiff file. The image must be
-   between [small] and 1 MB in size.
+   Your image must be a .gif, .jpg, or .png file. The image must be
+   between 100 bytes and 1 MB in size.
   
    #. Move your cursor over the placeholder image, and then select **Upload Image**.
    #. In the dialog box, select the image file that you want, and then click
       **Open**.
 
    To change or remove your profile image, move your cursor over your image,
-   and then select either **Change Image** or **Remove**.
+   and then select either **Change Image** or **Remove**. When you remove your
+   profile image, the placeholder image appears as your profile image.
 
 EdX saves your changes automatically.
 
