@@ -10,7 +10,7 @@ information, see :ref:`Work with edX Documentation Source Files`.
 
 In addition, you or another person on the translation team should understand
 Github repositories and the Github pull request process. For more information
-about using Github, see https://help.git.com.You or another person on the
+about using Github, see https://help.git.com. You or another person on the
 translation team should understand Github repositories and the Github pull
 request process. For more information, see https://help.git.com.
 
