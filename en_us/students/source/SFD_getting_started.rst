@@ -211,8 +211,9 @@ To create or edit a limited profile, follow these steps.
    upper left corner of the page, and then select **Limited Profile**.
 
 #. (optional) Add an image that you want to associate with your edX username.
-   Your image must be a .gif, .jpg, or .png file. The image must be
-   between 100 bytes and 1 MB in size.
+   Your image must be a .gif, .jpg, or .png file. The image must be between
+   100 bytes and 1 MB in size. If you do not add an image, the placeholder
+   image appears as your profile image.
   
    #. Move your cursor over the placeholder image, and then select **Upload Image**.
    #. In the dialog box, select the image file that you want, and then click
