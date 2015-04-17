@@ -12,6 +12,9 @@ edX Style Guide
     formattinglayout.rst
     images.rst
     global_English.rst
+    DocTranslationProcess.rst
+    DocTranslationGuidelines.rst
+    WorkingWithEdXDocSource.rst
     glossary.rst
 
     
