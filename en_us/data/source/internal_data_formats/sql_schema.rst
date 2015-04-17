@@ -119,6 +119,7 @@ enrollment.
 * :ref:`student_courseenrollment`
 * :ref:`user_api_usercoursetag`
 * :ref:`user_id_map`
+* :ref:`student_languageproficiency`
 
 .. _auth_user:
 
@@ -343,41 +344,47 @@ A sample of the heading row and a data row in the ``auth_userprofile`` table fol
     to test out the name-change functionality", "2012-10-22T12:23:10.598444"]]} 
     course.xml  NULL  NULL  NULL  NULL  NULL  1      NULL
 
+.. Need new example with the new columns
+
 The ``auth_userprofile`` table has the following columns.
 
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | Column             | Type         | Null | Key | Comment                                  |
-  +====================+==============+======+=====+==========================================+
-  | id                 | int(11)      | NO   | PRI |                                          |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | user_id            | int(11)      | NO   | UNI |                                          |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | name               | varchar(255) | NO   | MUL |                                          |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | language           | varchar(255) | NO   | MUL | # Obsolete                               |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | location           | varchar(255) | NO   | MUL | # Obsolete                               |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | meta               | longtext     | NO   |     |                                          |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | courseware         | varchar(255) | NO   |     | # Obsolete                               |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | gender             | varchar(6)   | YES  | MUL | # Only users signed up after prototype   |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | mailing_address    | longtext     | YES  |     | # Only users signed up after prototype   |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | year_of_birth      | int(11)      | YES  | MUL | # Only users signed up after prototype   |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | level_of_education | varchar(6)   | YES  | MUL | # Only users signed up after prototype   |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | goals              | longtext     | YES  |     | # Only users signed up after prototype   |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | allow_certificate  | tinyint(1)   | NO   |     |                                          |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | country            | varchar(2)   | YES  |     |                                          |
-  +--------------------+--------------+------+-----+------------------------------------------+
-  | city               | longtext     | YES  |     |                                          |
-  +--------------------+--------------+------+-----+------------------------------------------+
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | Column                     | Type         | Null | Key | Comment                                  |
+  +============================+==============+======+=====+==========================================+
+  | id                         | int(11)      | NO   | PRI |                                          |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | user_id                    | int(11)      | NO   | UNI |                                          |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | name                       | varchar(255) | NO   | MUL |                                          |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | language                   | varchar(255) | NO   | MUL | # Obsolete                               |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | location                   | varchar(255) | NO   | MUL | # Obsolete                               |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | meta                       | longtext     | NO   |     |                                          |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | courseware                 | varchar(255) | NO   |     | # Obsolete                               |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | gender                     | varchar(6)   | YES  | MUL | # Only users signed up after prototype   |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | mailing_address            | longtext     | YES  |     | # Only users signed up after prototype   |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | year_of_birth              | int(11)      | YES  | MUL | # Only users signed up after prototype   |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | level_of_education         | varchar(6)   | YES  | MUL | # Only users signed up after prototype   |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | goals                      | longtext     | YES  |     | # Only users signed up after prototype   |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | allow_certificate          | tinyint(1)   | NO   |     |                                          |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | country                    | varchar(2)   | YES  |     |                                          |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | city                       | longtext     | YES  |     |                                          |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | bio                        | varchar(3000)| YES  |     |                                          |
+  +----------------------------+--------------+------+-----+------------------------------------------+
+  | profile_image_uploaded_at  | datetime     | YES  |     |                                          |
+  +----------------------------+--------------+------+-----+------------------------------------------+
 
 **History**: ``country`` and ``city`` added January 2014. The organization of
 this table was different for the students who signed up for the MITx prototype
@@ -663,6 +670,23 @@ city
 
   **History**: Added in Jan 2014, not yet implemented.
 
+------
+bio
+------
+  Stores one or more paragraphs of biographical information that the learner
+  enters. The maximum number of characters is 3000.
+
+  **History**: Added in April 2015 with the Profile feature..
+
+
+------------------------------
+profile_image_uploaded_at
+------------------------------
+  Stores the date and time when a learner uploaded a profile image.
+
+  **History**: Added in April 2015 with the Profile feature.
+
+
 .. _student_courseenrollment:
 
 ==============================================
@@ -902,6 +926,45 @@ id
 username
 -----------
   The student's username in ``auth_user.username``. 
+
+.. _student_languageproficiency:
+
+=================================================
+Columns in the student_languageproficiency Table
+=================================================
+
+The ``student_languageproficiency`` table stores information about students'
+self-reported language preferences. Students can select only one value.
+
+.. Description
+
++-----------------+-------------+------+-----+---------+----------------+
+| Field           | Type        | Null | Key | Default | Extra          |
++-----------------+-------------+------+-----+---------+----------------+
+| id              | int(11)     | NO   | PRI | NULL    | auto_increment |
++-----------------+-------------+------+-----+---------+----------------+
+| user_profile_id | int(11)     | NO   | MUL | NULL    |                |
++-----------------+-------------+------+-----+---------+----------------+
+| code            | varchar(16) | NO   | MUL | NULL    |                |
++-----------------+-------------+------+-----+---------+----------------+
+
+---------
+id
+---------
+ 
+.. description 
+
+----------------
+user_profile_id
+----------------
+
+.. description 
+   
+----
+code
+----
+  The name of the language that the student selects from a list.
+
 
 .. _Courseware_Progress:
 
